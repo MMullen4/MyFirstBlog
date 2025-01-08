@@ -5,14 +5,12 @@ const buildElement = function (type, text, parent) {
   const tag = document.createElement(type);
   tag.textContent = text;
   parent.appendChild(tag);
-
   return tag;
 };
 
 const handleEmpty = function () {
   buildElement('h2', 'No Blog posts yet...', mainEl);
   const a = buildElement('a', 'Enter your own submission here!', mainEl);
-
   a.href = './index.html';
 };
 
@@ -21,7 +19,6 @@ const renderBlogList = function () {
 
   if (!blogs.length) {
     handleEmpty();
-
     return;
   }
 

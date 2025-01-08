@@ -14,7 +14,6 @@ const handleFormSubmit = function (event) {
     setTimeout(function () {
       errorEl.textContent = '';
     }, 4000);
-
     return;
   }
 
