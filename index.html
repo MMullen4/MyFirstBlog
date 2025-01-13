@@ -13,8 +13,10 @@
     <script defer src="./assets/js/form.js" type="text/javascript"></script>
   </head>
 <body>
+  <!-- creates landing page header and main elements -->
   <header>
     <h1>&nbsp;</h1>
+
     <button id="toggle">☀️</button>
   </header>
   <main>
@@ -22,18 +24,18 @@
     <section>
       <h2>What's on your mind?</h2>
       <form>
-        <label for="username">Username</label>
+        <label for="username">Username</label> <!-- associate username with input field-->
         <input id="username" type="text" />
 
-        <label for="title">Title</label>
+        <label for="title">Title</label> <!-- label & text input blog title-->
         <input id="title" type="text" />
 
-        <label for="content">Content</label>
+        <label for="content">Content</label> <!--allow for 5 lines of content-->
         <textarea id="content" type="text" rows="4"></textarea>
         
         <p id="error">&nbsp;</p>
       
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" /> <!--creates button with "Submit" text-->
       </form>
     </section>
   </main>

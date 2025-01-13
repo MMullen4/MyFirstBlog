@@ -1,13 +1,15 @@
-const modeBtnEl = document.querySelector('#toggle');
-let redirectURL = '';
+// logic to toggle the light/dark mode styles for the page and circle. 
+// The mode should be saved to local storage.
+const modeBtnEl = document.querySelector('#toggle'); // grabbed from html docs
+let redirectURL = ''; // variable to store url
 
-const redirectPage = function (url) {
-  redirectURL = url;
-  location.assign(url);
+const redirectPage = function (url) { // 
+  redirectURL = url; // stores url in variable
+  location.assign(url); // navs to the new page
 };
 
-const applyMode = function (mode) {
-  let icon, circleColor;
+const applyMode = function (mode) { //applies changes based upon current mode
+  let icon, circleColor; // change depending on mode
 
   if (mode === 'light') {
     icon = '☀️';
@@ -17,8 +19,8 @@ const applyMode = function (mode) {
     circleColor = '#8570a5';
   }
 
-  modeBtnEl.textContent = icon;
-  document.body.classList = mode;
+  modeBtnEl.textContent = icon; // changes the mode toggle button
+  document.body.classList = mode; // sets either light or dark CSS class for page
   document.documentElement.style.setProperty('--circle-color', circleColor);
 };
 
